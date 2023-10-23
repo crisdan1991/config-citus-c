@@ -21,14 +21,7 @@ La exportación de datos se puede realizar con el siguiente comando:
 ```bash
 pg_dump.exe -U postgres -h localhost -p 5432 --data-only -F c -b -v -f "D:\Proyectos\Inamhi\respaldodb\bandahm_data.backup" bandahm
 ```
-# Restauración de la Base de Datos
-La restauración se puede realizar a través de los siguientes comandos:
 
-```bash
-pg_dump.exe --format=plain --no-owner --file=D:\Proyectos\Inamhi\respaldodb\bandahm_data.sql postgres://postgres:postgres@localhost:5432/bandahm
-pg_restore.exe -U postgres -h db.server-inamhi.com -p 5432 -d bandahm "D:\Proyectos\Inamhi\respaldodb\bandahm_data.backup"
-psql -U postgres -h db.server-inamhi.com -p 5432 -d bandahmf < "D:\Proyectos\Inamhi\respaldodb\bandahm_data.backup"
-```
 # Exportación de la Estructura de la Base de Datos
 Se puede exportar la estructura de la base de datos con el siguiente comando:
 
